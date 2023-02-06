@@ -1,12 +1,12 @@
+import React from 'react';
 import { ListItem } from './ListItem';
-import arr from '../resources/array.json';
+import list from '../resources/list.json';
 
 export const List = () => {
   return (
     <ul className='todo-list'>
-      {/* <ListItem /> */}
-      {arr.map((item, idx) => (
-        <ListItem key={idx} {...item} />
+      {list.map((item) => (
+        <ListItem key={item.id} {...item} />
       ))}
     </ul>
   );
