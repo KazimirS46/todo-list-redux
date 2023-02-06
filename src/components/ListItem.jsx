@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const ListItem = (index) => {
+export const ListItem = ({ id, title }) => {
   const [stateCheckbox, setStateCheckbox] = useState(false);
 
   const checkboxSwitch = () => {
@@ -9,10 +9,10 @@ export const ListItem = (index) => {
   return (
     <>
       <li className='todo-item'>
-        <label htmlFor={`i${index}`}>
-          <input className='todo-checkbox' type='checkbox' value='x' id={`i${index}`} onChange={checkboxSwitch} />
+        <label htmlFor={`i${id}`}>
+          <input className='todo-checkbox' type='checkbox' value='x' id={`i${id}`} onChange={checkboxSwitch} />
         </label>
-        <span className={stateCheckbox ? 'label-marked' : 'label-notMarked'}>дело</span>
+        <span className={stateCheckbox ? 'label-marked' : 'label-notMarked'}>{title}</span>
       </li>
     </>
   );
