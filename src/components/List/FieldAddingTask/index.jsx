@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './field.module.css';
+
 const FIELDTEXT = {
   holder: 'Добавь задачу здесь',
   addButton: 'Добавить',
@@ -13,14 +15,20 @@ export const FieldAddingTask = ({ add }) => {
   };
 
   const clickAddButton = () => {
-    add(inputValue);
-    setInputValue('');
+    if (inputValue) {
+      add(inputValue);
+      setInputValue('');
+    }
+  };
+
+  const clickKey = (event) => {
+    event.key === 'Enter' && clickAddButton();
   };
 
   return (
-    <div className='container'>
-      <div className='content'>
-        <input type='text' className='addTodosInput' placeholder={FIELDTEXT.holder} value={inputValue} onChange={onChangeInput}></input>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <input type='text' placeholder={FIELDTEXT.holder} value={inputValue} onChange={onChangeInput} onKeyDown={clickKey}></input>
         <button onClick={clickAddButton}>{FIELDTEXT.addButton}</button>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 
+import styles from './list.module.css';
+
 import { ListItem } from './ListItem';
-import { EmptyList } from './EmptyList';
+import { EmptyList } from '../EmptyList';
 import { FieldAddingTask } from './FieldAddingTask';
 
 export const List = () => {
@@ -23,7 +25,7 @@ export const List = () => {
     <>
       <FieldAddingTask add={addTodo} />
       {todos.length ? (
-        <ul className='todo-list'>
+        <ul className={styles.todoList}>
           {todos.map((item) => (
             <ListItem key={item.id} id={item.id} title={item.title} delTodos={deleteTodos} />
           ))}
