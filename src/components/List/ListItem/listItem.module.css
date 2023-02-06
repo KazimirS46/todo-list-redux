@@ -89,6 +89,7 @@ label:hover {
 
 @media (max-width: 1024px) {
   .todoItem {
+    padding: 0 40px;
     width: 75%;
     margin-bottom: 0;
   }
@@ -120,5 +121,68 @@ label:hover {
   .todoItem > p {
     font-size: 0.4em;
     line-height: 250%;
+  }
+}
+
+@media (max-width: 640px) {
+  .todoItem > p {
+    font-size: 0.3em;
+    line-height: 250%;
+  }
+  label {
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .btnClose {
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+  }
+  .deleteSVG {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .todoItem {
+    width: 83%;
+  }
+  .todoItem > p {
+    font-size: 0.25em;
+    line-height: 250%;
+  }
+}
+
+@media (max-width: 320px) {
+  .todoItem {
+    width: 90%;
+  }
+  .todoItem > p {
+    margin: 10px 0;
+    font-size: 0.25em;
+    line-height: 150%;
+  }
+  label {
+    top: calc(50% - 18px);
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  .btnClose {
+    top: calc(50% - 18px);
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+  .deleteSVG {
+    top: calc(50% - 12px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
   }
 }
