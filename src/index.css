@@ -23,8 +23,13 @@ h1 {
   position: relative;
   width: 40%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 75px;
   border-bottom: 1px solid #000;
+}
+
+.todo-item > p {
+  margin: 0;
+  word-wrap: break-word;
 }
 
 label {
