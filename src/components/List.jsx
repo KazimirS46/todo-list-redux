@@ -15,9 +15,17 @@ export const List = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  console.log(todos);
+
+  const addTodo = (todo) => {
+    setTodos([...todos, { title: String(todo), id: todos.length }]);
+  };
+
+  console.log(todos);
+
   return (
     <>
-      <FieldAddingTask />
+      <FieldAddingTask add={addTodo} />
       {todos.length ? (
         <ul className='todo-list'>
           {todos.map((item) => (
