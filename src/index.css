@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 50px;
+  box-sizing: border-box;
 }
 
 .App {
@@ -85,4 +86,24 @@ label > .todo-checkbox {
 .deleteSVG:hover > path:nth-child(1),
 .deleteSVG:hover > path:nth-child(2) {
   fill: #808080;
+}
+
+.container {
+  position: relative;
+  margin: 0;
+  padding: 20px 40px;
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content > .title {
+  font-size: 0.7em;
+}
+
+.content > .description {
+  font-size: 1em;
 }
