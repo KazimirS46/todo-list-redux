@@ -1,10 +1,11 @@
+import { List } from './components/List';
+
 function App() {
   return (
-    <>
-      <ul>
-        <li>Дело</li>
-      </ul>
-    </>
+    <div className='App'>
+      <h1>To do List</h1>
+      <List />
+    </div>
   );
 }
 
