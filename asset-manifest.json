@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo-list-redux/static/css/main.7a347349.css",
+    "main.js": "/todo-list-redux/static/js/main.4ecb93fd.js",
+    "index.html": "/todo-list-redux/index.html",
+    "static/media/done-v-svgrepo-com.svg": "/todo-list-redux/static/media/done-v-svgrepo-com.7eb8c341a9bcbf0d422696ac28410525.svg",
+    "main.7a347349.css.map": "/todo-list-redux/static/css/main.7a347349.css.map",
+    "main.4ecb93fd.js.map": "/todo-list-redux/static/js/main.4ecb93fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a347349.css",
+    "static/js/main.4ecb93fd.js"
+  ]
+}
