@@ -28,8 +28,13 @@ export const FieldAddingTask = ({ add }) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <input type='text' placeholder={FIELDTEXT.holder} value={inputValue} onChange={onChangeInput} onKeyDown={clickKey}></input>
-        <button onClick={clickAddButton}>{FIELDTEXT.addButton}</button>
+        <input className={styles.field} type='text' placeholder={FIELDTEXT.holder} value={inputValue} onChange={onChangeInput} onKeyDown={clickKey}></input>
+        {/* <button onClick={clickAddButton}>{FIELDTEXT.addButton}</button> */}
+        <button className={styles.glowingBtn} onClick={clickAddButton}>
+          <span className={styles.glowingTxt}>
+            Д<span className={styles.faultyLetter}>о</span>бавить
+          </span>
+        </button>
       </div>
     </div>
   );

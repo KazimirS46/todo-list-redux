@@ -3,7 +3,7 @@
   width: 40%;
   margin: 0 auto;
   padding: 0 75px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #61efff;
 }
 
 .todoItem > p {
@@ -22,7 +22,7 @@ label {
   display: flex;
   width: 40px;
   height: 40px;
-  border: 1px solid black;
+  border: 1px solid #61efff;
   border-radius: 10px;
 }
 
@@ -41,20 +41,21 @@ label:hover {
   width: 50px;
   height: 50px;
   background-color: transparent;
-  border: none;
+  border: 2px solid rgb(97, 239, 255);
+  filter: blur(0.5px);
   border-radius: 10px;
   transition: background-color 0.3s, filter 0.3s;
 }
 
 .btnClose:hover {
-  filter: drop-shadow(0 5px 5px grey);
-  background-color: lightgrey;
+  filter: drop-shadow(0 5px 5px rgba(97, 239, 255, 0.5));
+  filter: blur(0.2px);
 }
 
 .deleteSVG {
   position: absolute;
-  top: 4px;
-  left: 5px;
+  top: 2px;
+  left: 3px;
 }
 
 .deleteSVG > path {
