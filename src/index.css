@@ -23,3 +23,13 @@ h1 {
   text-align: center;
   font-size: 0.8em;
 }
+
+@media (max-width: 640px) {
+  .App {
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 0.5em;
+  }
+}
