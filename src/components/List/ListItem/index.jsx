@@ -1,10 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import styles from './listItem.module.css';
 
 import doneSvg from '../../../assets/img/done-v-svgrepo-com.svg';
+import { deleteTodos } from '../../../redux/slices/listSlice';
 
-export const ListItem = ({ id, title, delTodos }) => {
+export const ListItem = ({ id, title }) => {
+  const dispatch = useDispatch();
   const [stateCheckbox, setStateCheckbox] = React.useState(false);
 
   const checkboxSwitch = () => {
@@ -18,9 +21,9 @@ export const ListItem = ({ id, title, delTodos }) => {
           <input className={styles.todoCheckbox} type='checkbox' value='x' id={`i${id}`} onChange={checkboxSwitch} />
           {stateCheckbox && <img src={doneSvg} alt='done' />}
         </label>
-        <p className={stateCheckbox && styles.labelMarked}>{title}</p>
+        <p className={stateCheckbox ? styles.labelMarked : null}>{title}</p>
         {stateCheckbox && (
-          <button className={styles.btnClose} onClick={() => delTodos(id)}>
+          <button className={styles.btnClose} onClick={() => dispatch(deleteTodos(id))}>
             <svg className={styles.deleteSVG} width='40px' height='40px' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'>
               <path d='M667.8 362.1H304V830c0 28.2 23 51 51.3 51h312.4c28.4 0 51.4-22.8 51.4-51V362.2h-51.3z' fill='transparent' />
               <path d='M750.3 295.2c0-8.9-7.6-16.1-17-16.1H289.9c-9.4 0-17 7.2-17 16.1v50.9c0 8.9 7.6 16.1 17 16.1h443.4c9.4 0 17-7.2 17-16.1v-50.9z' fill='transparent' />

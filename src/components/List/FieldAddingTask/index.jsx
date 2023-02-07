@@ -2,12 +2,16 @@ import React from 'react';
 
 import styles from './field.module.css';
 
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../../../redux/slices/listSlice';
+
 const FIELDTEXT = {
   holder: 'Добавь задачу здесь',
   addButton: 'Добавить',
 };
 
-export const FieldAddingTask = ({ add }) => {
+export const FieldAddingTask = () => {
+  const dispatch = useDispatch();
   const [inputValue, setInputValue] = React.useState('');
 
   const onChangeInput = (evt) => {
@@ -16,7 +20,7 @@ export const FieldAddingTask = ({ add }) => {
 
   const clickAddButton = () => {
     if (inputValue) {
-      add(inputValue);
+      dispatch(addTodo(inputValue));
       setInputValue('');
     }
   };
